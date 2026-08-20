@@ -87,8 +87,11 @@ def get_all_tasks():
 
 # Create tables and demo user
 with app.app_context():
-    db.create_all()
-    create_demo_user()
+    try:
+        db.create_all()
+        create_demo_user()
+    except Exception as e:
+        print(f"Database initialization failed: {e}")
 
 # Routes
 @app.route('/')
