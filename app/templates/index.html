@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+TO-DO List
+
+{% endblock %}
+
+{% block content %}
+<h2>My Tasks</h2>
+<div id="tasks-list">
+</div>
+<form method="POST" action="/tasks" class="mb-4 w-100">
+    <div class="input-group w-100">
+        <input type="text"
+               class="form-control form-control-lg"
+               name="title"
+               placeholder="Write your next task here..."
+               required>
+        <button class="btn btn-custom btn-lg" type="submit">Create</button>
+    </div>
+</form>
+
+<ul class="list-group w-100">
+    {% for task in tasks %}
+    <li class="list-group-item d-flex align-items-center gap-3">
+        <!-- Checkbox for marking complete -->
+        <form method="POST" action="/toggle_task/{{ task.id }}" style="display:inline;">
+            <div class="checkbox-wrapper-19">
+                <input type="checkbox" id="task-{{ task.id }}"
+                       {% if task.completed %}checked{% endif %}
+                       onchange="this.form.submit()">
+                <label for="task-{{ task.id }}" class="check-box"></label>
+            </div>
+        </form>
+
+
+        <!-- Task title -->
+        <span class="task-title {% if task.completed %}done{% endif %}">{{ task.title }}</span>
+
+        <!-- Buttons container -->
+        <div class="button-group">
+            <!-- Priority button -->
+            <form method="POST" action="/priority_task/{{ task.id }}">
+                <label class="star-priority">
+                    <input type="checkbox" {% if task.priority %}checked{% endif %}
+                           aria-label="Добавить в приоритет" onchange="this.form.submit()">
+                    <svg viewBox="0 0 24 24" class="star-icon">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </label>
+            </form>
+
+            <!-- Edit button -->
+            <form method="POST" action="/edit_task/{{ task.id }}">
+                <button class="btn btn-warning btn-sm" type="submit">Edit</button>
+            </form>
+
+            <!-- Delete button -->
+            <form method="POST" action="/delete_task/{{ task.id }}">
+                <button class="btn btn-danger btn-sm" type="submit">X</button>
+            </form>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

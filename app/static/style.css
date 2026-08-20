@@ -1,0 +1,278 @@
+body {
+    background-color: #E3F2FD !important;
+}
+
+@font-face {
+    font-family: 'LaCoffee';
+    src: url('/static/fonts/LaCoffeeDemo-BWD3V.otf');
+}
+
+* {
+    font-family: 'LaCoffee', sans-serif !important;
+}
+
+h2 {
+    text-align: center;
+}
+
+.list-group-item {
+    /*background-color: #F5F5F5 !important;*/
+    background-color: #F5F5F5 !important;
+    font-size: 18px !important;
+}
+
+.navbar-brand {
+    color: #D9B8FF !important;
+}
+
+.btn-custom {
+    background-color: #D9B8FF !important;
+    color: #000 !important;
+    border-color: #D9B8FF !important;
+    font-size: 18px !important;
+}
+
+
+.btn-custom:hover {
+    background-color: #D9B8FF !important;
+    color: #333 !important;
+}
+
+.btn-custom:hover {
+    background-color: #D9B8FF;
+    color: #333;
+  }
+
+.checkbox-wrapper-19 {
+    box-sizing: border-box;
+    --background-color: #fff;
+    --checkbox-height: 25px;
+}
+
+@-moz-keyframes dothabottomcheck-19 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--checkbox-height) / 2);
+    }
+}
+
+@-webkit-keyframes dothabottomcheck-19 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--checkbox-height) / 2);
+    }
+}
+
+@keyframes dothabottomcheck-19 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--checkbox-height) / 2);
+    }
+}
+
+@keyframes dothatopcheck-19 {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--checkbox-height) * 1.2);
+    }
+}
+
+@-webkit-keyframes dothatopcheck-19 {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--checkbox-height) * 1.2);
+    }
+}
+
+@-moz-keyframes dothatopcheck-19 {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--checkbox-height) * 1.2);
+    }
+}
+
+.checkbox-wrapper-19 input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-wrapper-19 .check-box {
+    height: var(--checkbox-height);
+    width: var(--checkbox-height);
+    background-color: #ffffff !important;
+    border: calc(var(--checkbox-height) * .1) solid #000;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: border-color ease 0.2s;
+    -o-transition: border-color ease 0.2s;
+    -webkit-transition: border-color ease 0.2s;
+    transition: border-color ease 0.2s;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-19 .check-box::before,
+.checkbox-wrapper-19 .check-box::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: calc(var(--checkbox-height) * .2);
+    background-color: #34b93d;
+    display: inline-block;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    content: " ";
+    -webkit-transition: opacity ease 0.5;
+    -moz-transition: opacity ease 0.5;
+    transition: opacity ease 0.5;
+}
+
+.checkbox-wrapper-19 .check-box::before {
+    top: calc(var(--checkbox-height) * .72);
+    left: calc(var(--checkbox-height) * .41);
+    box-shadow: 0 0 0 calc(var(--checkbox-height) * .05) var(--background-color);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.checkbox-wrapper-19 .check-box::after {
+    top: calc(var(--checkbox-height) * .37);
+    left: calc(var(--checkbox-height) * .05);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box,
+.checkbox-wrapper-19 .check-box.checked {
+    border-color: #34b93d;
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::after,
+.checkbox-wrapper-19 .check-box.checked::after {
+    height: calc(var(--checkbox-height) / 2);
+    -moz-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+    -o-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+    -webkit-animation: dothabottomcheck-19 0.2s ease 0s forwards;
+    animation: dothabottomcheck-19 0.2s ease 0s forwards;
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::before,
+.checkbox-wrapper-19 .check-box.checked::before {
+    height: calc(var(--checkbox-height) * 1.2);
+    -moz-animation: dothatopcheck-19 0.4s ease 0s forwards;
+    -o-animation: dothatopcheck-19 0.4s ease 0s forwards;
+    -webkit-animation: dothatopcheck-19 0.4s ease 0s forwards;
+    animation: dothatopcheck-19 0.4s ease 0s forwards;
+}
+
+.star-priority {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.star-priority input[type="checkbox"] {
+  display: none;
+}
+
+.star-icon {
+  width: 32px;
+  height: 32px;
+  fill: #8e8e93;
+  transition: fill 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.star-priority:hover .star-icon {
+  transform: scale(1.15);
+}
+
+.star-priority input[type="checkbox"]:checked + .star-icon {
+  fill: #D9B8FF;
+  filter: drop-shadow(0 0 3px rgba(255, 204, 0, 0.5));
+}
+
+.done {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.list-group {
+  width: 100%;
+}
+
+.list-group-item {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.btn {
+  margin-top: 30px !important;
+}
+
+.input-group .btn {
+  margin-top: 0 !important;
+}
+
+.button-group .btn {
+  margin-top: 0 !important;
+}
+
+.input-group {
+  align-items: center !important;
+}
+
+.list-group-item .button-group {
+  align-items: center !important;
+}
+
+.page-heading {
+  text-align: center !important;
+  margin-top: 60px !important;
+  margin-bottom: 30px !important;
+}
+
+.col-md-8 h1 {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
